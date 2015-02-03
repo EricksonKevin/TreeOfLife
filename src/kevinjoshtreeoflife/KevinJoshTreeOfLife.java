@@ -9,6 +9,7 @@ import byui.cit260.treeoflife.model.Game;
 import byui.cit260.treeoflife.model.Map;
 import byui.cit260.treeoflife.model.Player;
 import byui.cit260.treeoflife.model.Character;
+import byui.cit260.treeoflife.model.Ranking;
 /**
  *
  * @author Erickson
@@ -19,12 +20,12 @@ public class KevinJoshTreeOfLife {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-     Character characterOne = new Character(); 
+     Ranking levels = new Ranking(); 
      
-      characterOne.setName("kevin");
+      levels.setValue(45);
       
-      String characterInfo = characterOne.toString();
-      System.out.println(characterInfo);
+      String rankingInfo = levels.toString();
+      System.out.println(rankingInfo);
       
     }
     }     
