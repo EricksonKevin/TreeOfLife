@@ -9,6 +9,7 @@ import byui.cit260.treeoflife.model.Game;
 import byui.cit260.treeoflife.model.Map;
 import byui.cit260.treeoflife.model.Player;
 import byui.cit260.treeoflife.model.Character;
+import byui.cit260.treeoflife.model.Location;
 import byui.cit260.treeoflife.model.Ranking;
 /**
  *
@@ -20,11 +21,11 @@ public class KevinJoshTreeOfLife {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-     Ranking levels = new Ranking(); 
+     Location area = new Location(); 
      
-      levels.setValue(45);
+      area.setIronRodLocation("tree");
       
-      String rankingInfo = levels.toString();
+      String rankingInfo = area.toString();
       System.out.println(rankingInfo);
       
     }
