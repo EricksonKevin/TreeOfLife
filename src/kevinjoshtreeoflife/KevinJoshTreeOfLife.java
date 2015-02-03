@@ -8,7 +8,7 @@ package kevinjoshtreeoflife;
 import byui.cit260.treeoflife.model.Game;
 import byui.cit260.treeoflife.model.Map;
 import byui.cit260.treeoflife.model.Player;
-
+import byui.cit260.treeoflife.model.Character;
 /**
  *
  * @author Erickson
@@ -19,20 +19,25 @@ public class KevinJoshTreeOfLife {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      Map gameOne = new Map();
+     Character characterOne = new Character(); 
+     
+      characterOne.setName("kevin");
       
-      gameOne.setIronRod("Kevin");
-      
-      
-      String playerInfo = gameOne.toString();
-      System.out.println(playerInfo);
-      
-      
-      
-      
-      
-      
+      String characterInfo = characterOne.toString();
+      System.out.println(characterInfo);
       
     }
+    }     
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     
-}
+    
+
