@@ -5,6 +5,7 @@
  */
 package kevinjoshtreeoflife;
 
+import byui.cit260.treeoflife.model.Game;
 import byui.cit260.treeoflife.model.Player;
 
 /**
@@ -17,12 +18,12 @@ public class KevinJoshTreeOfLife {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      Player playerOne = new Player();
+      Game gameOne = new Game();
       
-      playerOne.setPlayerName("Kevin");
-      playerOne.setScore(25);
+      gameOne.setProgress("Kevin");
       
-      String playerInfo = playerOne.toString();
+      
+      String playerInfo = gameOne.toString();
       System.out.println(playerInfo);
       
       
