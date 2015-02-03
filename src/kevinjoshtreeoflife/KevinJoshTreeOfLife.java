@@ -19,11 +19,15 @@ public class KevinJoshTreeOfLife {
     public static void main(String[] args) {
       Player playerOne = new Player();
       
-      playerOne.setName("Lehi");
-      playerOne.setFaith(5);
+      playerOne.setPlayerName("Kevin");
+      playerOne.setScore(25);
       
       String playerInfo = playerOne.toString();
       System.out.println(playerInfo);
+      
+      
+      
+      
       
       
       
