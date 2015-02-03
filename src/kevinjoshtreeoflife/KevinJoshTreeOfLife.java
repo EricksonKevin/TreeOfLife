@@ -6,6 +6,7 @@
 package kevinjoshtreeoflife;
 
 import byui.cit260.treeoflife.model.Game;
+import byui.cit260.treeoflife.model.Map;
 import byui.cit260.treeoflife.model.Player;
 
 /**
@@ -18,9 +19,9 @@ public class KevinJoshTreeOfLife {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      Game gameOne = new Game();
+      Map gameOne = new Map();
       
-      gameOne.setProgress("Kevin");
+      gameOne.setIronRod("Kevin");
       
       
       String playerInfo = gameOne.toString();
