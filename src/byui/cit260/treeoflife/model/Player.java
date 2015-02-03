@@ -7,77 +7,41 @@ package byui.cit260.treeoflife.model;
 
 import java.io.Serializable;
 import java.util.Objects;
-
 /**
  *
  * @author Erickson
  */
 public class Player implements Serializable {
-
-    private String name;
-    private Integer faith;
-    private Integer righteousness;
-    private Integer salvation;
-    private Integer spirit;
+    
+    private String playerName;
+    private double score;
 
     public Player() {
     }
     
     
 
-    public String getName() {
-        return name;
+    public String getPlayerName() {
+        return playerName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
     }
 
-    public Integer getFaith() {
-        return faith;
+    public double getScore() {
+        return score;
     }
 
-    public void setFaith(Integer faith) {
-        this.faith = faith;
-    }
-
-    public Integer getRighteousness() {
-        return righteousness;
-    }
-
-    public void setRighteousness(Integer righteousness) {
-        this.righteousness = righteousness;
-    }
-
-    public Integer getSalvation() {
-        return salvation;
-    }
-
-    public void setSalvation(Integer salvation) {
-        this.salvation = salvation;
-    }
-
-    public Integer getSpirit() {
-        return spirit;
-    }
-
-    public void setSpirit(Integer spirit) {
-        this.spirit = spirit;
-    }
-
-    @Override
-    public String toString() {
-        return "Player{" + "name=" + name + ", faith=" + faith + ", righteousness=" + righteousness + ", salvation=" + salvation + ", spirit=" + spirit + '}';
+    public void setScore(double score) {
+        this.score = score;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 47 * hash + Objects.hashCode(this.name);
-        hash = 47 * hash + Objects.hashCode(this.faith);
-        hash = 47 * hash + Objects.hashCode(this.righteousness);
-        hash = 47 * hash + Objects.hashCode(this.salvation);
-        hash = 47 * hash + Objects.hashCode(this.spirit);
+        hash = 97 * hash + Objects.hashCode(this.playerName);
+        hash = 97 * hash + (int) (Double.doubleToLongBits(this.score) ^ (Double.doubleToLongBits(this.score) >>> 32));
         return hash;
     }
 
@@ -90,24 +54,25 @@ public class Player implements Serializable {
             return false;
         }
         final Player other = (Player) obj;
-        if (!Objects.equals(this.name, other.name)) {
+        if (!Objects.equals(this.playerName, other.playerName)) {
             return false;
         }
-        if (!Objects.equals(this.faith, other.faith)) {
-            return false;
-        }
-        if (!Objects.equals(this.righteousness, other.righteousness)) {
-            return false;
-        }
-        if (!Objects.equals(this.salvation, other.salvation)) {
-            return false;
-        }
-        if (!Objects.equals(this.spirit, other.spirit)) {
+        if (Double.doubleToLongBits(this.score) != Double.doubleToLongBits(other.score)) {
             return false;
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Player{" + "playerName=" + playerName + ", score=" + score + '}';
+    }
+
+    public void setnewPlayer(String kevin) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
-                   
+    
+    
 }
