@@ -4,33 +4,43 @@
  * and open the template in the editor.
  */
 package byui.cit260.treeoflife.model;
+
 import java.io.Serializable;
-import java.util.Objects;
 /**
  *
  * @author Erickson
  */
-public class Location implements Serializable {
-    
-   private String ironRodLocation;
+public class Location implements Serializable{
+ 
+    private double rowCount;
+    private double columnCount;
 
     public Location() {
     }
-   
-   
+    
+    
 
-    public String getIronRodLocation() {
-        return ironRodLocation;
+    public double getRowCount() {
+        return rowCount;
     }
 
-    public void setIronRodLocation(String ironRodLocation) {
-        this.ironRodLocation = ironRodLocation;
+    public void setRowCount(double rowCount) {
+        this.rowCount = rowCount;
+    }
+
+    public double getColumnCount() {
+        return columnCount;
+    }
+
+    public void setColumnCount(double columnCount) {
+        this.columnCount = columnCount;
     }
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 37 * hash + Objects.hashCode(this.ironRodLocation);
+        int hash = 7;
+        hash = 47 * hash + (int) (Double.doubleToLongBits(this.rowCount) ^ (Double.doubleToLongBits(this.rowCount) >>> 32));
+        hash = 47 * hash + (int) (Double.doubleToLongBits(this.columnCount) ^ (Double.doubleToLongBits(this.columnCount) >>> 32));
         return hash;
     }
 
@@ -43,7 +53,10 @@ public class Location implements Serializable {
             return false;
         }
         final Location other = (Location) obj;
-        if (!Objects.equals(this.ironRodLocation, other.ironRodLocation)) {
+        if (Double.doubleToLongBits(this.rowCount) != Double.doubleToLongBits(other.rowCount)) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.columnCount) != Double.doubleToLongBits(other.columnCount)) {
             return false;
         }
         return true;
@@ -51,8 +64,8 @@ public class Location implements Serializable {
 
     @Override
     public String toString() {
-        return "Location{" + "ironRodLocation=" + ironRodLocation + '}';
+        return "Location{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
     }
-   
-   
+    
+    
 }

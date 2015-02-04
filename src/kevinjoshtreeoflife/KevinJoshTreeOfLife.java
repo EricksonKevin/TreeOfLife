@@ -23,7 +23,8 @@ public class KevinJoshTreeOfLife {
     public static void main(String[] args) {
      Location area = new Location(); 
      
-      area.setIronRodLocation("tree");
+      area.setRowCount(7);
+      area.setColumnCount(8);
       
       String rankingInfo = area.toString();
       System.out.println(rankingInfo);
