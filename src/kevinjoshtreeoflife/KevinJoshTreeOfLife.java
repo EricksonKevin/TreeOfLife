@@ -10,6 +10,7 @@ import byui.cit260.treeoflife.model.Map;
 import byui.cit260.treeoflife.model.Player;
 import byui.cit260.treeoflife.model.Character;
 import byui.cit260.treeoflife.model.Location;
+import byui.cit260.treeoflife.model.RankType;
 import byui.cit260.treeoflife.model.Ranking;
 /**
  *
@@ -21,13 +22,14 @@ public class KevinJoshTreeOfLife {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-     Location area = new Location(); 
+     RankType type = new RankType(); 
      
-      area.setRowCount(7);
-      area.setColumnCount(8);
+      type.setRanType("faith");
+      type.setRankDescription("you are super faithful");
+      type.setThresholdValue(8);
       
-      String rankingInfo = area.toString();
-      System.out.println(rankingInfo);
+      String RankTypeInfo = type.toString();
+      System.out.println(RankTypeInfo);
       
     }
     }     
