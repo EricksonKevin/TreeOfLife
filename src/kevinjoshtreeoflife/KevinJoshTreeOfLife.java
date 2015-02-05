@@ -5,13 +5,17 @@
  */
 package kevinjoshtreeoflife;
 
+import byui.cit260.treeoflife.model.Armor;
 import byui.cit260.treeoflife.model.Game;
 import byui.cit260.treeoflife.model.Map;
 import byui.cit260.treeoflife.model.Player;
 import byui.cit260.treeoflife.model.Character;
+import byui.cit260.treeoflife.model.Inventory;
 import byui.cit260.treeoflife.model.Location;
+import byui.cit260.treeoflife.model.Question;
 import byui.cit260.treeoflife.model.RankType;
 import byui.cit260.treeoflife.model.Ranking;
+import byui.cit260.treeoflife.model.Scene;
 /**
  *
  * @author Erickson
@@ -22,14 +26,13 @@ public class KevinJoshTreeOfLife {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-     RankType type = new RankType(); 
+     Armor armorpiece = new Armor(); 
      
-      type.setRanType("faith");
-      type.setRankDescription("you are super faithful");
-      type.setThresholdValue(8);
+      armorpiece.setLevel("Level Four");
+      armorpiece.setAttribute("Faith");
       
-      String RankTypeInfo = type.toString();
-      System.out.println(RankTypeInfo);
+      String ArmorInfo = armorpiece.toString();
+      System.out.println(ArmorInfo);
       
     }
     }     
