@@ -33,7 +33,58 @@ public class KevinJoshTreeOfLife {
       
       String ArmorInfo = armorpiece.toString();
       System.out.println(ArmorInfo);
+      // Game Class
+    Game move = new Game(); 
+     
+      move.setProgress("level up");
       
+      
+      String GameInfo = move.toString();
+      System.out.println(GameInfo);
+      
+      //Map Class
+      
+      Map spot = new Map();
+              
+              spot.setIronRod("mist");
+              
+              String  MapInfo = spot.toString();
+              System.out.println(MapInfo);
+              
+      //  Player Class
+              
+       Player person = new Player();
+       
+               person.setPlayerName("Kevin");
+               person.setScore(20);
+               
+               String PlayerInfo = person.toString();
+               System.out.println(PlayerInfo);
+               
+        //Character Class
+         
+        Character each = new Character();
+        
+                each.setName("Nephi");
+                
+                String CharacterInfo = each.toString();
+                System.out.println(CharacterInfo);
+                
+        //Inventory Class
+                
+        Inventory pieces = new Inventory();
+        
+        pieces.setInvType("Sword");
+        pieces.setNumberinStock(5);
+        pieces.setReqAmount(10);
+        
+        String InventoryInfo = pieces.toString();
+        System.out.println(InventoryInfo);
+        
+              
+                
+              
+              
     }
     }     
       

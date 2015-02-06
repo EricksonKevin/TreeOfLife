@@ -14,7 +14,7 @@ import java.util.Objects;
 public class Player implements Serializable {
     
     private String playerName;
-    private double score;
+    private Double score;
 
     public Player() {
     }
