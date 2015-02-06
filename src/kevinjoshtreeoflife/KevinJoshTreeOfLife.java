@@ -81,10 +81,61 @@ public class KevinJoshTreeOfLife {
         String InventoryInfo = pieces.toString();
         System.out.println(InventoryInfo);
         
-              
-                
-              
-              
+        //Location Class
+        
+        Location place = new Location();
+        
+        place.setRowCount(5);
+        place.setColumnCount(6);
+        
+        String LocationInfo = place.toString();
+        System.out.println(LocationInfo);
+        
+        //Question Class
+        
+        Question valid = new Question();
+        
+        valid.setQuestion("How are You?");
+        valid.setAnswer("Good");
+        valid.setLinkedWith("faith");
+        
+        String QuestionInfo = valid.toString();
+        System.out.println(QuestionInfo);
+        
+        //RankType Class
+        
+        RankType build = new RankType();
+        
+        build.setRanType("Shield");
+        build.setRankDescription("Faith");
+        build.setThresholdValue(7);
+        
+        String RankTypeInfo = build.toString();
+        System.out.println(RankTypeInfo);
+        
+        //Ranking Class
+        
+        Ranking great = new Ranking();
+        
+        great.setValue(8);
+        
+        String RankingInfo = great.toString();
+        System.out.println(RankingInfo);
+        
+        //Scene Class
+        
+        Scene mist = new Scene();
+        
+        mist.setName("church");
+        mist.setType("pray");
+        mist.setDescription("help");
+        
+        String SceneInfo = mist.toString();
+        System.out.println(SceneInfo);
+        
+        
+        
+            
     }
     }     
       
