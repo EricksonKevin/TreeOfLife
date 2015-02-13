@@ -16,7 +16,11 @@ import byui.cit260.treeoflife.model.Question;
 import byui.cit260.treeoflife.model.RankType;
 import byui.cit260.treeoflife.model.Ranking;
 import byui.cit260.treeoflife.model.Scene;
+
+import byui.cit260.treeoflife.control.RankControl;
+
 /**
+ * 
  *
  * @author Erickson
  */
@@ -32,7 +36,7 @@ public class KevinJoshTreeOfLife {
       armorpiece.setAttribute("Faith");
       
       String ArmorInfo = armorpiece.toString();
-      System.out.println(ArmorInfo);
+      (ArmorInfo);
       // Game Class
     Game move = new Game(); 
      

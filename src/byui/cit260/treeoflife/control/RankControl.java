@@ -11,4 +11,18 @@ package byui.cit260.treeoflife.control;
  */
 public class RankControl {
     
+    public double salvationEligible(double value, double thresholdValue){
+      if (value >= thresholdValue ) {
+        return 1;
+    }
+       if (value < thresholdValue){
+           return -1;
+           
+       } 
+        
+    return question;
+      
+    
+}
+    
 }
