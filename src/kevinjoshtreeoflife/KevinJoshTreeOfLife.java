@@ -36,7 +36,7 @@ public class KevinJoshTreeOfLife {
       armorpiece.setAttribute("Faith");
       
       String ArmorInfo = armorpiece.toString();
-      (ArmorInfo);
+      System.out.println(ArmorInfo);
       // Game Class
     Game move = new Game(); 
      
