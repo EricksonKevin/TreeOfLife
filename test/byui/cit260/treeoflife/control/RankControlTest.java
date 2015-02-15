@@ -33,11 +33,11 @@ public class RankControlTest {
     @Test
     public void testSalvationEligible() {
         System.out.println("salvationEligible");
-        double value = 0.0;
-        double thresholdValue = 0.0;
+        double value = 6.0;
+        double thresholdValue = 7.0;
         RankControl instance = new RankControl();
-        boolean expResult = true;
-        boolean result = instance.salvationEligible(value, thresholdValue);
+        String expResult = "Question";
+        String result = instance.salvationEligible(value, thresholdValue);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
