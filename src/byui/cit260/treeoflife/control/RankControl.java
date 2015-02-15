@@ -11,13 +11,33 @@ package byui.cit260.treeoflife.control;
  */
 public class RankControl {
     
-    public String  salvationEligible(double value, double thresholdValue){
+    public boolean  salvationEligible(double value, double thresholdValue){
       if (value <= thresholdValue ) {
-        return "Question";
+        return true;
     }
-      return "No question"; 
+      return false; 
     }     
    
+    public boolean  faithEligible(double value, double thresholdValue){
+      if (value <= thresholdValue ) {
+        return true;
+    }
+      return false; 
+    } 
+    
+    public boolean  spiritEligible(double value, double thresholdValue){
+      if (value <= thresholdValue ) {
+        return true;
+    }
+      return false; 
+    } 
+    
+    public boolean  rightEligible(double value, double thresholdValue){
+      if (value <= thresholdValue ) {
+        return true;
+    }
+      return false; 
+    } 
 }        
         
         

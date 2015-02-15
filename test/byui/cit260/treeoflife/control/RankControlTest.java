@@ -33,11 +33,59 @@ public class RankControlTest {
     @Test
     public void testSalvationEligible() {
         System.out.println("salvationEligible");
-        double value = 6.0;
-        double thresholdValue = 7.0;
+        double value = 0.0;
+        double thresholdValue = 0.0;
         RankControl instance = new RankControl();
-        String expResult = "Question";
-        String result = instance.salvationEligible(value, thresholdValue);
+        boolean expResult = false;
+        boolean result = instance.salvationEligible(value, thresholdValue);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of faithEligible method, of class RankControl.
+     */
+    @Test
+    public void testFaithEligible() {
+        System.out.println("faithEligible");
+        double value = 0.0;
+        double thresholdValue = 0.0;
+        RankControl instance = new RankControl();
+        boolean expResult = false;
+        boolean result = instance.faithEligible(value, thresholdValue);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of spiritEligible method, of class RankControl.
+     */
+    @Test
+    public void testSpiritEligible() {
+        System.out.println("spiritEligible");
+        double value = 0.0;
+        double thresholdValue = 0.0;
+        RankControl instance = new RankControl();
+        boolean expResult = false;
+        boolean result = instance.spiritEligible(value, thresholdValue);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of rightEligible method, of class RankControl.
+     */
+    @Test
+    public void testRightEligible() {
+        System.out.println("rightEligible");
+        double value = 0.0;
+        double thresholdValue = 0.0;
+        RankControl instance = new RankControl();
+        boolean expResult = false;
+        boolean result = instance.rightEligible(value, thresholdValue);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
