@@ -182,7 +182,7 @@ public class RankControlTest {
      */
     @Test
     public void testSpiritEligible() {
-        System.out.println("spiritEligible");
+        System.out.println("spiritEligible_test1");
         double value = 7.0;
         double thresholdValue = 7.0;
         RankControl instance = new RankControl();
@@ -192,14 +192,126 @@ public class RankControlTest {
         
         
     }
+    
+    {
+        System.out.println("spiritEligible_test2");
+        double value = 9.0;
+        double thresholdValue = 7.0;
+        RankControl instance = new RankControl();
+        boolean expResult = true;
+        boolean result = instance.spiritEligible(value, thresholdValue);
+        assertEquals(expResult, result);
+        
+        
+    }
 
-    /**
+     {
+        System.out.println("spiritEligible_test3");
+        double value = 1.0;
+        double thresholdValue = 7.0;
+        RankControl instance = new RankControl();
+        boolean expResult = false;
+        boolean result = instance.spiritEligible(value, thresholdValue);
+        assertEquals(expResult, result);
+        
+        
+    }
+    
+      {
+        System.out.println("spiritEligible_test4");
+        double value = 6.0;
+        double thresholdValue = 7.0;
+        RankControl instance = new RankControl();
+        boolean expResult = false;
+        boolean result = instance.spiritEligible(value, thresholdValue);
+        assertEquals(expResult, result);
+        
+        
+    }
+     {
+        System.out.println("spiritEligible_test5");
+        double value = 7.0;
+        double thresholdValue = 7.0;
+        RankControl instance = new RankControl();
+        boolean expResult = true;
+        boolean result = instance.spiritEligible(value, thresholdValue);
+        assertEquals(expResult, result);
+        
+        
+    }
+    {
+        System.out.println("spiritEligible_test6");
+        double value = 10.0;
+        double thresholdValue = 7.0;
+        RankControl instance = new RankControl();
+        boolean expResult = true;
+        boolean result = instance.spiritEligible(value, thresholdValue);
+        assertEquals(expResult, result);
+        
+        
+    }
+     /**
      * Test of rightEligible method, of class RankControl.
      */
     @Test
     public void testRightEligible() {
-        System.out.println("rightEligible");
+        System.out.println("rightEligible_1");
+        double value = 7.0;
+        double thresholdValue = 7.0;
+        RankControl instance = new RankControl();
+        boolean expResult = true;
+        boolean result = instance.rightEligible(value, thresholdValue);
+        assertEquals(expResult, result);
+        
+        
+    }
+    {
+        System.out.println("rightEligible_2");
         double value = 9.0;
+        double thresholdValue = 7.0;
+        RankControl instance = new RankControl();
+        boolean expResult = true;
+        boolean result = instance.rightEligible(value, thresholdValue);
+        assertEquals(expResult, result);
+        
+        
+    }
+    {
+        System.out.println("rightEligible_3");
+        double value = 1.0;
+        double thresholdValue = 7.0;
+        RankControl instance = new RankControl();
+        boolean expResult = false;
+        boolean result = instance.rightEligible(value, thresholdValue);
+        assertEquals(expResult, result);
+        
+        
+    }
+    {
+        System.out.println("rightEligible_4");
+        double value = 6.0;
+        double thresholdValue = 7.0;
+        RankControl instance = new RankControl();
+        boolean expResult = false;
+        boolean result = instance.rightEligible(value, thresholdValue);
+        assertEquals(expResult, result);
+        
+        
+    }
+    {
+        System.out.println("rightEligible_5");
+        double value = 7.0;
+        double thresholdValue = 7.0;
+        RankControl instance = new RankControl();
+        boolean expResult = true;
+        boolean result = instance.rightEligible(value, thresholdValue);
+        assertEquals(expResult, result);
+        
+        
+    }
+    {
+        System.out.println("rightEligible_6");
+        double value = 10.0;
         double thresholdValue = 7.0;
         RankControl instance = new RankControl();
         boolean expResult = true;
