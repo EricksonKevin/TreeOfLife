@@ -5,6 +5,10 @@
  */
 package byui.cit260.treeoflife.view;
 
+import byui.cit260.treeoflife.control.ProgramControl;
+import byui.cit260.treeoflife.model.Player;
+import java.util.Scanner;
+
 /**
  *
  * @author Erickson
@@ -21,10 +25,13 @@ public class StartProgramView {
         this.displayBanner();
         
         //Prompt the player to enter their name.  Retrieve the name of player
+        String PlayerName = this.getPlayerName();
         
         //Create and save player object
+        Player player = ProgramControl.createPlayer(PlayerName);
         
         //Display personalized welcome message
+        this.displayWelcomeMessage(player);
         
         //Display the Main menu
 
@@ -56,4 +63,39 @@ public class StartProgramView {
         System.out.println("\n\n*********************************************");
                  
     }
-}   
+
+    public String getPlayerName() {
+            boolean valid = false; //indicate if the name has been retrieved
+            String playerName = null;
+            Scanner keyboard = new Scanner(System.in);//keyboard input stream
+            
+            while(!valid){//while a valid name has not been retrieved
+                //prompt for the player's name
+                System.out.println("Enter the player's name below:");
+                // get the name from the keyboard and trim off the blanks
+                playerName = keyboard.nextLine();
+                playerName = playerName.trim();
+                
+                
+                // if the name is invalid (less than two characters in length)
+                if (playerName.length()< 2) {
+                    System.out.println("Invalid name - the name must not be blank");
+                    continue; // and repeat again
+                }
+                break; // out of the (exit) the repetition
+            }
+            return playerName; // return the name
+        }
+
+    private void displayWelcomeMessage(Player player) {
+        System.out.println("\n\n=============================================");
+        System.out.println("\tWelcome to the game " + player.getPlayerName());
+        System.out.println("\tWe hope you have a lot of fun");
+        System.out.println("=================================================");
+    }
+    }
+
+    
+        
+            
+   
