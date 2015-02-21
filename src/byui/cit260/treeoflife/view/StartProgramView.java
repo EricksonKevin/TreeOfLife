@@ -31,6 +31,29 @@ public class StartProgramView {
 }
 
     private void displayBanner() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n\n*********************************************");
+        
+        System.out.println("*                                           *"
+                + "\n* This is game is THE TREE OF LIFE.         *"
+                + "\n* In this game you will need to put on the  *"
+                + "\n* whole armor of God and follow the path to *"
+                + "\n* the Tree of Life.");
+        
+         System.out.println("*                                           *"
+                + "\n* You will need to increase your rank in    *"
+                + "\n* four seperate categories.                 *"
+                + "\n* Faith, Righteousness, Salvation and Spirit*" 
+                + "\n* You will be able to increase your         *"
+                + "\n* individual ranks as you correctly         *"
+                + "\n* answer gospel based questions or through  *"
+                + "\n* repantance.  As you come closer God and   *"
+                + "\n* increase in these four areas, you will    *"
+                + "\n* find yourself at THE TREE OF LIFE         *");
+         
+          System.out.println("*                                           *"
+                + "\n* Hold fast to the iron rod and you will    *"
+                + "\n* be able to endure this adventure          *");
+        System.out.println("\n\n*********************************************");
+                 
     }
 }   
