@@ -3,18 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.treeoflife.control;
-
-import byui.cit260.treeoflife.model.Player;
+package byui.cit260.treeoflife.view;
 
 /**
  *
  * @author Erickson
  */
-public class GameControl {
+public class GameMenuView {
 
-    public static void createNewGame(Player player) {
-        System.out.println("\n*** createNewGame stub function called ***");
+    void displayMenu() {
+        System.out.println("\n*** displayMenu stub function called ***");
         
     }
     
