@@ -16,11 +16,10 @@ public class StartProgramViewTest {
     
     public StartProgramViewTest() {
     }
-
-    /**
+/**
      * Test of startProgram method, of class StartProgramView.
      */
-@Test
+    @Test
     public void testStartProgram() {
         System.out.println("startProgram");
         StartProgramView instance = new StartProgramView();
@@ -28,18 +27,20 @@ public class StartProgramViewTest {
         // TODO review the generated test code and remove the default call to fail.
         
     }
+
     /**
-     * Test of getPlayersName method, of class StartProgramView.
+     * Test of getPlayerName method, of class StartProgramView.
      */
     @Test
     public void testGetPlayerName() {
-        System.out.println("getPlayersName");
+        System.out.println("getPlayerName");
         StartProgramView instance = new StartProgramView();
-        String expResult = "hh";
+        String expResult = "";
         String result = instance.getPlayerName();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-    
+        
     }
+    
     
 }

@@ -30,7 +30,10 @@ public class KevinJoshTreeOfLife {
     private static Player player = null;
     
     public static void main(String[] args){
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.startProgram();  
     }
+    
     public static Game getCurrentGame() {
         return currentGame;
     }
@@ -50,11 +53,9 @@ public class KevinJoshTreeOfLife {
     /**
      * @param args the command line arguments
      */
-     
-    {
-        StartProgramView startProgramView = new StartProgramView();
-        startProgramView.startProgram();  
-    }
+    
+          
+    
         }   
       
       
