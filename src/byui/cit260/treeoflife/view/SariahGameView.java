@@ -5,14 +5,73 @@
  */
 package byui.cit260.treeoflife.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Nexeus
  */
 public class SariahGameView {
 
+    public final String MENU = "\n"
+            + "\n---------------------------------------"
+            + "\n Hello Sariah, It is your privilege    "
+            + "\n to embark on this journey.  Your      "
+            + "\n husband, Lehi, has shared this vision "
+            + "\n of the tree of life and its eternal   "
+            + "\n meaning.  As you hold to the iron rod "
+            + "\n and prove yourself worthy of the fruit"
+            + "\n of the tree of life, you will gain    "
+            + "\n eternal blessings and exaltation.     "
+            + "\n---------------------------------------"
+            + "\nC - Continue                           "
+            + "\nQ - Quit                               "
+            + "\n---------------------------------------";
     void displayMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        char selection = ' ';
+        do {
+            System.out.println(MENU);  //display the main menu
+            
+            String input = this.getInput(); // get the users selection
+            selection = input.charAt(0); //get first character of string
+            
+            this.doAction(selection); //do action based on selection
+            
+        } while (selection != 'Q'); // a selection is not "Exit"
+    }
+
+    private String getInput() {
+       Boolean valid = false; //indicate if the name has been retrieved
+            String choice = null;
+            Scanner keyboard = new Scanner(System.in);//keyboard input stream
+            
+            while(!valid){//while a valid selection has not been retrieved
+                //prompt for the player's selection
+                System.out.println("Select Option");
+                // get the selection from the keyboard and trim off the blanks
+                choice = keyboard.nextLine();
+                choice = choice.trim();
+                
+                break; // out of the (exit) the repetition
+            }
+            return choice; // return the selection option
+    }
+
+    private void doAction(char choice) {
+        
+        switch (choice){
+            case 'C': // Continue Game
+                System.out.println("\nIncrease your rank status in Faith, Righteousness, Spirit, and Salvation to reach the Tree of Life");
+                break;           
+            case 'Q': //Quit help menu
+                return;
+            default:
+                System.out.println("\n***Invalid selection *** Try again");
+                break;
+                
+               
+        }
     }
     
 }

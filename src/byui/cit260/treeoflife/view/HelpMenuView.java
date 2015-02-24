@@ -60,7 +60,7 @@ public class HelpMenuView {
         
         switch (choice){
             case 'G': // Goal of the game
-                System.out.println("\n***hi");
+                System.out.println("\nIncrease your rank status in Faith, Righteousness, Spirit, and Salvation to reach the Tree of Life");
                 break;
             case 'M': //How to move
                 System.out.println("\n***Invalid selection *** Try again");

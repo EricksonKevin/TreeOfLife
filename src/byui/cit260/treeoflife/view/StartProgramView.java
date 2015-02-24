@@ -43,10 +43,10 @@ public class StartProgramView {
         System.out.println("\n\n*********************************************");
         
         System.out.println("*                                           *"
-                + "\n* This is game is THE TREE OF LIFE.         *"
+                + "\n* This is the game of THE TREE OF LIFE.     *"
                 + "\n* In this game you will need to put on the  *"
                 + "\n* whole armor of God and follow the path to *"
-                + "\n* the Tree of Life.");
+                + "\n* the Tree of Life.                          ");
         
          System.out.println("*                                           *"
                 + "\n* You will need to increase your rank in    *"
@@ -57,11 +57,11 @@ public class StartProgramView {
                 + "\n* answer gospel based questions or through  *"
                 + "\n* repantance.  As you come closer God and   *"
                 + "\n* increase in these four areas, you will    *"
-                + "\n* find yourself at THE TREE OF LIFE         *");
+                + "\n* find yourself at THE TREE OF LIFE.        *");
          
           System.out.println("*                                           *"
                 + "\n* Hold fast to the iron rod and you will    *"
-                + "\n* be able to endure this adventure          *");
+                + "\n* be able to endure all things              *");
         System.out.println("\n\n*********************************************");
                  
     }
@@ -73,7 +73,7 @@ public class StartProgramView {
             
             while(!valid){//while a valid name has not been retrieved
                 //prompt for the player's name
-                System.out.println("Enter the player's name below:");
+                System.out.println("Enter your name below:");
                 // get the name from the keyboard and trim off the blanks
                 playerName = keyboard.nextLine();
                 playerName = playerName.trim();

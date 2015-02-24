@@ -57,16 +57,16 @@ public class GameMenuView {
     private void doAction(char choice) {
         
         switch (choice){
-            case 'N': // Goal of the game
+            case 'N': // Choose Nephi
                 this.startNephiGame();
                 break;
-            case 'S': //How to move
+            case 'S': //Choose Sariah
                 this.startSariahGame();
                 break;
-            case 'L': //Character Status
+            case 'L': //Choose Lamen
                  this.startLamanGame();
                 break;
-            case 'Q': //Wuit help menu
+            case 'Q': //Quit help menu
                 return;
             default:
                 System.out.println("\n***Invalid selection *** Try again");
