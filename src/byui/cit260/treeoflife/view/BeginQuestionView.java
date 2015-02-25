@@ -9,24 +9,20 @@ import java.util.Scanner;
 
 /**
  *
- * @author Nexeus
+ * @author Erickson
  */
-public class SariahGameView {
-
+public class BeginQuestionView {
     public final String MENU = "\n"
-            + "\n---------------------------------------"
-            + "\n Hello Sariah, It is your privilege    "
-            + "\n to embark on this journey.  Your      "
-            + "\n husband, Lehi, has shared this vision "
-            + "\n of the tree of life and its eternal   "
-            + "\n meaning.  As you hold to the iron rod "
-            + "\n and prove yourself worthy of the fruit"
-            + "\n of the tree of life, you will gain    "
-            + "\n eternal blessings and exaltation.     "
-            + "\n---------------------------------------"
-            + "\nB - Begin Game                         "
-            + "\nQ - Quit                               "
-            + "\n---------------------------------------";
+            + "\n-----------------------------------------"
+            + "\n| This is your opportunity to answer    |"
+            + "\n| some questions to earn points         |"
+            + "\n| towards your armour pieces.           |"
+            + "\n| Would you like to test your knowledge?|"
+            + "\n-----------------------------------------"
+            + "\nY - Test Knowledge                       "           
+            + "\nQ - Quit                                 "
+            + "\n-----------------------------------------";
+        
     void displayMenu() {
         
         char selection = ' ';
@@ -61,10 +57,11 @@ public class SariahGameView {
     private void doAction(char choice) {
         
         switch (choice){
-            case 'B': // Continue Game
+            case 'Y': // Goal of the game
                 System.out.println("\nIncrease your rank status in Faith, Righteousness, Spirit, and Salvation to reach the Tree of Life");
-                break;           
-            case 'Q': //Quit help menu
+                break;
+              
+            case 'Q': //Wuit help menu
                 return;
             default:
                 System.out.println("\n***Invalid selection *** Try again");
@@ -73,5 +70,4 @@ public class SariahGameView {
                
         }
     }
-    
 }
