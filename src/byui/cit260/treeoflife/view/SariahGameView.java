@@ -53,6 +53,7 @@ public class SariahGameView {
                 choice = keyboard.nextLine();
                 choice = choice.trim();
                 
+                
                 break; // out of the (exit) the repetition
             }
             return choice; // return the selection option
@@ -62,7 +63,7 @@ public class SariahGameView {
         
         switch (choice){
             case 'B': // Continue Game
-                System.out.println("\nIncrease your rank status in Faith, Righteousness, Spirit, and Salvation to reach the Tree of Life");
+        this.startBeginQuestionView();
                 break;           
             case 'Q': //Quit help menu
                 return;
@@ -72,6 +73,11 @@ public class SariahGameView {
                 
                
         }
+    }
+
+    private void startBeginQuestionView() {
+       BeginQuestionView BeginQuestion = new BeginQuestionView();
+     BeginQuestion.displayMenu();
     }
     
 }

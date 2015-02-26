@@ -12,32 +12,39 @@ import java.util.Scanner;
  * @author Erickson
  */
 public class BeginQuestionView {
+    
+        
+    
     public final String MENU = "\n"
             + "\n-----------------------------------------"
-            + "\n| This is your opportunity to answer    |"
-            + "\n| some questions to earn points         |"
-            + "\n| towards your armour pieces.           |"
-            + "\n| Would you like to test your knowledge?|"
+            + "\n| Lehi has asked your sons to go back   |"
+            + "\n| to Jerusalem to obtain the brass      |"
+            + "\n| plates from Laben                     |"
+            + "\n| How do you react?                     |"
             + "\n-----------------------------------------"
-            + "\nY - Test Knowledge                       "           
-            + "\nQ - Quit                                 "
+            + "\n- support                                "           
+            + "\n- disagree                               "
+            + "\n- murmur                                 "
+            + "\n- question                               "
+            + "\n                                         "
+            + "\nQ- Quit                                  "
             + "\n-----------------------------------------";
         
     void displayMenu() {
         
-        char selection = ' ';
+        String choice ="";
         do {
             System.out.println(MENU);  //display the main menu
             
             String input = this.getInput(); // get the users selection
-            selection = input.charAt(0); //get first character of string
             
-            this.doAction(selection); //do action based on selection
             
-        } while (selection != 'Q'); // a selection is not "Exit"
+           //this.displayAction(choice); 
+            
+        } while (choice != "Q"); // a selection is not "Exit"
     }
 
-    private String getInput() {
+    public String getInput() {
        Boolean valid = false; //indicate if the name has been retrieved
             String choice = null;
             Scanner keyboard = new Scanner(System.in);//keyboard input stream
@@ -49,25 +56,33 @@ public class BeginQuestionView {
                 choice = keyboard.nextLine();
                 choice = choice.trim();
                 
+                {
+                if (choice.equals("support")){
+                    System.out.println("Congratulations, you earned 2 faith points.");
+                }
+                else if (choice.equals("disagree")){
+                    System.out.println("Sorry, you received no points.");                   
+                }
+                
+                else if (choice.equals("murmur")){
+                    System.out.println("You received 1 spirit point.");
+                }
+                else if (choice.equals("question")){
+                    System.out.println("You received 1 righteousness point.");
+                }
+                else {
+                    System.out.println("Invalid choice");
+                } 
+    }
+                
+                
                 break; // out of the (exit) the repetition
             }
             return choice; // return the selection option
     }
-
-    private void doAction(char choice) {
-        
-        switch (choice){
-            case 'Y': // Goal of the game
-                System.out.println("\nIncrease your rank status in Faith, Righteousness, Spirit, and Salvation to reach the Tree of Life");
-                break;
-              
-            case 'Q': //Wuit help menu
-                return;
-            default:
-                System.out.println("\n***Invalid selection *** Try again");
-                break;
-                
-               
-        }
-    }
+    
+    
+     
 }
+ 
+
