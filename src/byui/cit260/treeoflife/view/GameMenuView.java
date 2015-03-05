@@ -23,7 +23,7 @@ public class GameMenuView {
             + "\nQ - Quit"
             + "\n---------------------------------------";
         
-    void displayMenu() {
+    void display() {
         
         char selection = ' ';
         do {

@@ -13,9 +13,11 @@ import kevinjoshtreeoflife.KevinJoshTreeOfLife;
  *
  * @author Erickson
  */
-public class MainMenuView {
+
+public class MainMenuView extends View {
     
-    private final String MENU = "\n"
+    public MainMenuView() {
+        super("\n"
             + "\n---------------------------------------"
             + "\n| Main Menu                           |"
             + "\n---------------------------------------"
@@ -24,41 +26,15 @@ public class MainMenuView {
             + "\nH - Get help on  how to play game"
             + "\nS - Save game"
             + "\nE - Exit"
-            + "\n---------------------------------------";
+            + "\n---------------------------------------");
+    }  
     
-    void displayMenu() {
-       
-        char selection = ' ';
-        do {
-            System.out.println(MENU);  //display the main menu
-            
-            String input = this.getInput(); // get the users selection
-            selection = input.charAt(0); //get first character of string
-            
-            this.doAction(selection); //do action based on selection
-            
-        } while (selection != 'E'); // a selection is not "Exit"
-    }
-
-    private String getInput() {
-       Boolean valid = false; //indicate if the name has been retrieved
-            String choice = null;
-            Scanner keyboard = new Scanner(System.in);//keyboard input stream
-            
-            while(!valid){//while a valid selection has not been retrieved
-                //prompt for the player's selection
-                System.out.println("Select Option");
-                // get the selection from the keyboard and trim off the blanks
-                choice = keyboard.nextLine();
-                choice = choice.trim();
-                
-                break; // out of the (exit) the repetition
-            }
-            return choice; // return the selection option
-    }
-
-    private void doAction(char choice) {
+       @Override
+    public void doAction(Object obj) {
         
+        String value  = (String)obj;
+        
+        char choice = value.charAt(0);
         switch (choice){
             case 'N': // create and start a new game
                 this.startNewGame();
@@ -73,7 +49,8 @@ public class MainMenuView {
                 this.saveGame();
                 break;  
             case 'E': //exit the program
-                return;
+                return ;
+                
             default:
                 System.out.println("\n***Invalid selection *** Try again");
                 break;
@@ -88,7 +65,7 @@ public class MainMenuView {
       
       //display the game menu
       GameMenuView gameMenu = new GameMenuView();
-      gameMenu.displayMenu();
+      gameMenu.display();
     }
 
     private void startExistingGame() {
