@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public abstract class View implements ViewInterface {
     
-    private String promptMessage;
+    public String promptMessage;
 
     public View(String promptMessage) {
         this.promptMessage = promptMessage;
@@ -34,7 +34,7 @@ public abstract class View implements ViewInterface {
        
         char selection = ' ';
         do {
-            System.out.println();  //display the main menu
+            System.out.println(promptMessage);  //display the main menu
             
             String input = this.getInput(); // get the users selection
             selection = input.charAt(0); //get first character of string

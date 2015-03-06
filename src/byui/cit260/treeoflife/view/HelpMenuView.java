@@ -11,10 +11,11 @@ import java.util.Scanner;
  *
  * @author Erickson
  */
-public class HelpMenuView {
+public class HelpMenuView extends View{
 
     
-        public final String MENU = "\n"
+        public HelpMenuView() {
+        super("\n"
             + "\n---------------------------------------"
             + "\n| Help Menu                           |"
             + "\n---------------------------------------"
@@ -23,41 +24,15 @@ public class HelpMenuView {
             + "\nP - Character Status"
             + "\nA - Obtain armor"
             + "\nQ - Quit"
-            + "\n---------------------------------------";
+            + "\n---------------------------------------");
         
-    void displayMenu() {
+        }
+    @Override
+    public void doAction(Object obj) {
         
-        char selection = ' ';
-        do {
-            System.out.println(MENU);  //display the main menu
-            
-            String input = this.getInput(); // get the users selection
-            selection = input.charAt(0); //get first character of string
-            
-            this.doAction(selection); //do action based on selection
-            
-        } while (selection != 'Q'); // a selection is not "Exit"
-    }
-
-    private String getInput() {
-       Boolean valid = false; //indicate if the name has been retrieved
-            String choice = null;
-            Scanner keyboard = new Scanner(System.in);//keyboard input stream
-            
-            while(!valid){//while a valid selection has not been retrieved
-                //prompt for the player's selection
-                System.out.println("Select Option");
-                // get the selection from the keyboard and trim off the blanks
-                choice = keyboard.nextLine();
-                choice = choice.trim();
-                
-                break; // out of the (exit) the repetition
-            }
-            return choice; // return the selection option
-    }
-
-    private void doAction(char choice) {
+            String value  = (String)obj;
         
+        char choice = value.charAt(0);       
         switch (choice){
             case 'G': // Goal of the game
                 System.out.println("\nIncrease your rank status in Faith, Righteousness, Spirit, and Salvation to reach the Tree of Life");

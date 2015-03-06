@@ -11,9 +11,10 @@ import java.util.Scanner;
  *
  * @author Erickson
  */
-public class GameMenuView {
+public class GameMenuView extends View {
 
-        public final String MENU = "\n"
+        public GameMenuView() {
+        super("\n"
             + "\n---------------------------------------"
             + "\n| Character Selection                           |"
             + "\n---------------------------------------"
@@ -21,41 +22,14 @@ public class GameMenuView {
             + "\nS - Sariah"
             + "\nL - Laman"
             + "\nQ - Quit"
-            + "\n---------------------------------------";
+            + "\n---------------------------------------");
+        }
+    @Override
+    public void doAction(Object obj) {
         
-    void display() {
+        String value  = (String)obj;
         
-        char selection = ' ';
-        do {
-            System.out.println(MENU);  //display the main menu
-            
-            String input = this.getInput(); // get the users selection
-            selection = input.charAt(0); //get first character of string
-            
-            this.doAction(selection); //do action based on selection
-            
-        } while (selection != 'Q'); // a selection is not "Exit"
-    }
-
-    private String getInput() {
-       Boolean valid = false; //indicate if the name has been retrieved
-            String choice = null;
-            Scanner keyboard = new Scanner(System.in);//keyboard input stream
-            
-            while(!valid){//while a valid selection has not been retrieved
-                //prompt for the player's selection
-                System.out.println("Select Option");
-                // get the selection from the keyboard and trim off the blanks
-                choice = keyboard.nextLine();
-                choice = choice.trim();
-                
-                break; // out of the (exit) the repetition
-            }
-            return choice; // return the selection option
-    }
-
-    private void doAction(char choice) {
-        
+        char choice = value.charAt(0);
         switch (choice){
             case 'N': // Choose Nephi
                 this.startNephiGame();

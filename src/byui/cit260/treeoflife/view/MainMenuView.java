@@ -29,7 +29,7 @@ public class MainMenuView extends View {
             + "\n---------------------------------------");
     }  
     
-       @Override
+    @Override
     public void doAction(Object obj) {
         
         String value  = (String)obj;
@@ -75,7 +75,7 @@ public class MainMenuView extends View {
     private void displayHelpMenu() {
        // show help menu
      HelpMenuView helpMenu = new HelpMenuView();
-     helpMenu.displayMenu();
+     helpMenu.display();
      
     }
 
