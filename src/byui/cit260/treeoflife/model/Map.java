@@ -5,6 +5,7 @@
  */
 package byui.cit260.treeoflife.model;
 
+import byui.cit260.treeoflife.control.GameControl;
 import java.io.Serializable; 
 import java.util.Objects;
 /**
@@ -12,8 +13,35 @@ import java.util.Objects;
  * @author Erickson
  */
 public class Map implements Serializable {
+
+    private static Scene createScenes() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
-    private String ironRod;
+    private int rowCount;
+
+    public int getRowCount() {
+        return rowCount;
+    }
+
+    public void setRowCount(int rowCount) {
+        this.rowCount = rowCount;
+    }
+
+    public int getColumnCount() {
+        return columnCount;
+    }
+
+    public void setColumnCount(int columnCount) {
+        this.columnCount = columnCount;
+    }
+    private int columnCount;
+
+    public Map(int rowCount, int columnCount) {
+        this.rowCount = rowCount;
+        this.columnCount = columnCount;
+    }
+    
     
     private Game game;
 
@@ -25,14 +53,22 @@ public class Map implements Serializable {
         this.game = game;
     }
 
-    public Location getLocation() {
-        return location;
+    
+    private Location [] [] locations;
+
+    public Map(Location[][] locations) {
+        this.locations = locations;
     }
 
-    public void setLocation(Location location) {
-        this.location = location;
+    public Location[][] getLocations() {
+        return locations;
     }
-    private Location location;
+
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
+    }
+
+    
     
 
     public Map() {
@@ -40,20 +76,8 @@ public class Map implements Serializable {
     
     
 
-    public String getIronRod() {
-        return ironRod;
-    }
-
-    public void setIronRod(String ironRod) {
-        this.ironRod = ironRod;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 17 * hash + Objects.hashCode(this.ironRod);
-        return hash;
-    }
+   
+    
 
     @Override
     public boolean equals(Object obj) {
@@ -64,15 +88,20 @@ public class Map implements Serializable {
             return false;
         }
         final Map other = (Map) obj;
-        if (!Objects.equals(this.ironRod, other.ironRod)) {
-            return false;
-        }
+        
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "Map{" + "ironRod=" + ironRod + '}';
+    private static Map createMap(){
+        
+        Map map = new Map(20, 20);
+        
+        Scene scenes = createScenes();
+        
+        GameControl.assignScenesToLocations(map, scenes);
+        
+        return map;
+        
     }
     
     

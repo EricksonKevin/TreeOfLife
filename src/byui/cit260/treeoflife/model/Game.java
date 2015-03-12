@@ -17,6 +17,10 @@ public class Game implements Serializable {
     private String progress;
     
     private Player player;
+    private Map map;
+    private Character character;
+    
+    
 
     public Player getPlayer() {
         return player;
@@ -41,8 +45,7 @@ public class Game implements Serializable {
     public void setCharacter(Character character) {
         this.character = character;
     }
-    private Map map;
-    private Character character;
+    
     
 
     public Game() {
@@ -83,6 +86,10 @@ public class Game implements Serializable {
     @Override
     public String toString() {
         return "Game{" + "progress=" + progress + '}';
+    }
+
+    public void setCharacter(java.lang.Character character) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

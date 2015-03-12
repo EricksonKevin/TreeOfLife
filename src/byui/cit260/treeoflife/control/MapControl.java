@@ -5,10 +5,27 @@
  */
 package byui.cit260.treeoflife.control;
 
+import byui.cit260.treeoflife.model.Map;
+
 /**
  *
  * @author Erickson
  */
 public class MapControl {
+
+   public static Map createMap() throws MapControlException {
+       System.out.println("*** called createMap() ***");
+       return null;
+    }
+
+    public static void moveActorsToStartingLocation(Map map) {
+        System.out.println("*** called moveActorsToStartingLocation() ***");
+    }
+    
+    public static class MapControlException extends Exception {
+
+     public MapControlException() {
+  }
+  }
     
 }
