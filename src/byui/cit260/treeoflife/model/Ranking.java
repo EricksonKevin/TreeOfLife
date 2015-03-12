@@ -13,6 +13,27 @@ import java.io.Serializable;
 public class Ranking implements Serializable {
     
     private double value;
+    
+    private Character character;
+
+    public Character getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Character character) {
+        this.character = character;
+    }
+
+    public RankType[] getRanktype() {
+        return ranktype;
+    }
+
+    public void setRanktype(RankType[] ranktype) {
+        this.ranktype = ranktype;
+    }
+    private RankType [] ranktype;
+    
+    
 
     public Ranking() {
     }

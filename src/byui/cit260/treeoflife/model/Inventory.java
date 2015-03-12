@@ -16,6 +16,26 @@ public class Inventory implements Serializable{
     private String invType;
     private Integer numberinStock;
     private Integer reqAmount;
+    
+    private RankType[] ranktype;
+
+    public RankType[] getRanktype() {
+        return ranktype;
+    }
+
+    public void setRanktype(RankType[] ranktype) {
+        this.ranktype = ranktype;
+    }
+
+    public Armor getArmor() {
+        return armor;
+    }
+
+    public void setArmor(Armor armor) {
+        this.armor = armor;
+    }
+    private Armor armor;
+    
 
     public String getInvType() {
         return invType;

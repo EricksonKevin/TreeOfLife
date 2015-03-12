@@ -16,6 +16,26 @@ public class Question implements Serializable{
     private String question;
     private String answer;
     private String linkedWith;
+    
+    private Location [] location;
+
+    public Location[] getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location[] location) {
+        this.location = location;
+    }
+
+    public RankType[] getRanktype() {
+        return ranktype;
+    }
+
+    public void setRanktype(RankType[] ranktype) {
+        this.ranktype = ranktype;
+    }
+    private RankType [] ranktype;
+    
 
     public String getQuestion() {
         return question;

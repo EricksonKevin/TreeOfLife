@@ -15,6 +15,25 @@ public class Player implements Serializable {
     
     private String playerName;
     private Double score;
+    
+    private Character chracter;
+
+    public Character getChracter() {
+        return chracter;
+    }
+
+    public void setChracter(Character chracter) {
+        this.chracter = chracter;
+    }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+    private Game game;
 
     public Player() {
     }

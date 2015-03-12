@@ -5,6 +5,7 @@
  */
 package byui.cit260.treeoflife.model;
 
+import java.awt.Point;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -12,50 +13,75 @@ import java.util.Objects;
  *
  * @author Erickson
  */
-public class Character implements Serializable {
+public enum Character implements Serializable {
+  
+    Nephi,
+    Sariah,
+    Lamen;
     
-    private String name;
+    private Location location;
 
-    public Character() {
-    }
-    
-    
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public Location getLocation() {
+        return location;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 97 * hash + Objects.hashCode(this.name);
-        return hash;
+    public void setLocation(Location location) {
+        this.location = location;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Character other = (Character) obj;
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        return true;
+    public Game getGame() {
+        return game;
     }
 
-    @Override
-    public String toString() {
-        return "Character{" + "name=" + name + '}';
+    public void setGame(Game game) {
+        this.game = game;
     }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public Ranking[] getRanking() {
+        return ranking;
+    }
+
+    public void setRanking(Ranking[] ranking) {
+        this.ranking = ranking;
+    }
+
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
+    private Game game;
+    private Player player;
+    private Ranking [] ranking;
+    private Inventory inventory;
     
     
     
+    private final Point coordinates;
+
+     Character() {
+        
+        coordinates = new Point(1,1);
+        
+    }
+
+    public Point getCoordinates() {
+        return coordinates;
+    }
+
+ 
+    
+
+    
+      
 }

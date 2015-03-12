@@ -14,6 +14,36 @@ public class Location implements Serializable{
  
     private double rowCount;
     private double columnCount;
+    
+    private Map map;
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
+
+    public Question[] getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(Question[] question) {
+        this.question = question;
+    }
+    private Scene scene;
+    private Question [] question;
+    
+    
 
     public Location() {
     }

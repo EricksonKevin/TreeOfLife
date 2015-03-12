@@ -14,6 +14,26 @@ import java.util.Objects;
 public class Map implements Serializable {
     
     private String ironRod;
+    
+    private Game game;
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+    private Location location;
+    
 
     public Map() {
     }

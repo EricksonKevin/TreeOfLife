@@ -15,6 +15,17 @@ public class Armor implements Serializable{
     
     private String level;
     private String attribute;
+    
+    private Inventory inventory;
+
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
+    
 
     public String getLevel() {
         return level;

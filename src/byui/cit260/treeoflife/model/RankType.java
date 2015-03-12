@@ -16,6 +16,35 @@ public class RankType implements Serializable{
     private String ranType;
     private String rankDescription;
     private Integer thresholdValue;
+    
+    private Ranking [] ranking;
+
+    public Ranking[] getRanking() {
+        return ranking;
+    }
+
+    public void setRanking(Ranking[] ranking) {
+        this.ranking = ranking;
+    }
+
+    public Question[] getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(Question[] question) {
+        this.question = question;
+    }
+
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
+    private Question [] question;
+    private Inventory inventory;
+    
 
     public String getRanType() {
         return ranType;
