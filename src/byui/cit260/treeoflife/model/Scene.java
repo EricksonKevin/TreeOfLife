@@ -5,8 +5,10 @@
  */
 package byui.cit260.treeoflife.model;
 
+import byui.cit260.treeoflife.control.MapControl.MapControlException;
 import java.io.Serializable;
 import java.util.Objects;
+import kevinjoshtreeoflife.KevinJoshTreeOfLife;
 /**
  *
  * @author Nexeus
@@ -44,40 +46,26 @@ public class Scene implements Serializable{
     public Scene() {
     }
 
-    @Override
-    public String toString() {
-        return "Scene{" + "name=" + name + ", type=" + type + ", description=" + description + '}';
+    void setMapSymbol(String _st_) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 59 * hash + Objects.hashCode(this.name);
-        hash = 59 * hash + Objects.hashCode(this.type);
-        hash = 59 * hash + Objects.hashCode(this.description);
-        return hash;
+    void setBlocked(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Scene other = (Scene) obj;
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        if (!Objects.equals(this.type, other.type)) {
-            return false;
-        }
-        if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
-        return true;
+    void setTravelTime(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
+
+    void setTravelTime(double POSITIVE_INFINITY) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
+
+    
+    
+    
+    
+
