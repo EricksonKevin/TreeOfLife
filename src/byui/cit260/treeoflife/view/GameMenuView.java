@@ -5,6 +5,8 @@
  */
 package byui.cit260.treeoflife.view;
 
+import byui.cit260.treeoflife.model.Location;
+import byui.cit260.treeoflife.model.Map;
 import java.util.Scanner;
 
 /**
@@ -16,11 +18,13 @@ public class GameMenuView extends View {
         public GameMenuView() {
         super("\n"
             + "\n---------------------------------------"
-            + "\n| Character Selection                           |"
+            + "\n| Game Menu                            |"
             + "\n---------------------------------------"
-            + "\nN - Nephi"
-            + "\nS - Sariah"
-            + "\nL - Laman"
+            + "\nV - View Map"
+            + "\nC - Character Status" 
+            + "\nI - View Inventory"     
+            + "\nM - Move to new location"
+            + "\nH - Help"    
             + "\nQ - Quit"
             + "\n---------------------------------------");
         }
@@ -31,16 +35,22 @@ public class GameMenuView extends View {
         
         char choice = value.charAt(0);
         switch (choice){
-            case 'N': // Choose Nephi
-                this.startNephiGame();
+            case 'V': // View map
+                this.viewMap();
                 break;
-            case 'S': //Choose Sariah
-                this.startSariahGame();
+            case 'C': //Character Status
+                this.characterStatus();
                 break;
-            case 'L': //Choose Lamen
-                 this.startLamanGame();
+            case 'I': // View inventory
+                this.viewInventory();
                 break;
-            case 'Q': //Quit help menu
+            case 'M': //Move to new location
+                 this.moveLocation();
+                break;
+            case 'H': //Help
+                 this.HelpMenuView();
+                break;    
+            case 'Q': //Quit Game
                 return;
             default:
                 System.out.println("\n***Invalid selection *** Try again");
@@ -64,6 +74,58 @@ public class GameMenuView extends View {
     private void startLamanGame() {
         LamanGameView gameMenu = new LamanGameView();
       gameMenu.displayMenu();
+    }
+
+    private void HelpMenuView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void viewMap() {
+       
+        Map map = new Map();
+        
+        Location [][] locations = map.getLocations();
+       
+        System.out.println("Map for The Tree of Life Game");
+        
+        System.out.println("\n | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 |");
+        
+            for (Location[] row : locations) {
+                System.out.println("---------------------------------------------------------------------------------------------"+"\n 2");
+               
+                for (Location[] column: locations) {
+                    System.out.println("|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety");
+                    Location[][] currentLocation = map.getLocations();
+                    
+                  Location location = new Location();
+                  if (location.isVisited()) {
+                      MapSymbol symbol = new MapSymbol();
+                      
+                              }
+                  else {
+                      System.out.println("??");
+                      
+                  }
+                }
+            }
+    }
+
+    private void characterStatus() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void moveLocation() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void viewInventory() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static class MapSymbol {
+
+        public MapSymbol() {
+        }
     }
         
     }

@@ -68,6 +68,10 @@ public class Location implements Serializable{
 
     public Location() {
     }
+
+    public boolean isVisited() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 
