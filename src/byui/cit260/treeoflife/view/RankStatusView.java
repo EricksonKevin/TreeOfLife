@@ -31,11 +31,10 @@ public class RankStatusView extends View {
         switch (choice){
             case "H": // Highest Ranking function
                 this.maxRank();
-               
                 break;
                 
             case "L": //Lowest Ranking function
-                System.out.println("\n***Invalid selection *** Try again");
+                this.minRank();;
                 break;
               
             case "Q": //Quit help menu
@@ -73,6 +72,31 @@ public class RankStatusView extends View {
                }
     
 }
+
+    private void minRank() {
+       class minRank{
+           
+               public void main(String args[]){
+           int array[] = new int[]{5, 3, 2, 9};
+                   
+                   int min = getMin(array);
+                   System.out.println("Maximum Value is: "+min);
+           }
+                  
+                   public int getMin(int[] inputArray){
+                       int minValue = inputArray[0];
+                       for (int i=1; i < inputArray.length;i++){
+                           if(inputArray[i] < minValue){
+                               minValue = inputArray[i];
+                               
+                           }
+                   }
+                       return minValue;
+                   }
+               }
+    
+}
+
     
 }
 
