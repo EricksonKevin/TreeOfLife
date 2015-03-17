@@ -37,27 +37,22 @@ public class MainMenuView extends View {
         
         String value  = (String)obj;
         
-        char choice = value.charAt(0);
+         String choice = value;
         switch (choice){
-            case 'N': {
-            try {
-                // create and start a new game
+            case "N":  
                 this.startNewGame();
-            } catch (MapControl.MapControlException ex) {
-                Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
+        
                 break;
-            case 'G': //get and start an existing game
+            case "G": //get and start an existing game
                 this.startExistingGame();
                 break;
-            case 'H': //display the help menu
+            case "H": //display the help menu
                 this.displayHelpMenu();
                 break;
-            case 'S': //save the current game
+            case "S": //save the current game
                 this.saveGame();
                 break;  
-            case 'E': //exit the program
+            case "E": //exit the program
                 return ;
                 
             default:
@@ -68,7 +63,7 @@ public class MainMenuView extends View {
         }
     }
 
-    private void startNewGame() throws MapControl.MapControlException {
+    private void startNewGame() {
         //create new game
       GameControl.createNewGame(KevinJoshTreeOfLife.getPlayer());
       

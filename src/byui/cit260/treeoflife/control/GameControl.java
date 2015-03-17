@@ -18,7 +18,7 @@ import kevinjoshtreeoflife.KevinJoshTreeOfLife;
  */
 public class GameControl {
 
-    public static void createNewGame(Player player) throws MapControl.MapControlException {
+    public static void createNewGame(Player player)  {
         
         Game game = new Game();
         KevinJoshTreeOfLife.setCurrentGame(game);

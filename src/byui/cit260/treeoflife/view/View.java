@@ -32,16 +32,16 @@ public abstract class View implements ViewInterface {
     @Override
     public void display() {
        
-        char selection = ' ';
+        String selection = " ";
         do {
             System.out.println(promptMessage);  //display the main menu
             
             String input = this.getInput(); // get the users selection
-            selection = input.charAt(0); //get first character of string
+            selection = input; //get first character of string
             
             this.doAction(selection); //do action based on selection
             
-        } while (selection != 'E'); // a selection is not "Exit"
+        } while (selection != "E"); // a selection is not "Exit"
     }
     
     @Override
