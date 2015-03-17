@@ -41,7 +41,7 @@ public class HelpMenuView extends View{
                 System.out.println("\n***Invalid selection *** Try again");
                 break;
             case 'P': //Character Status
-                 System.out.println("\n***Invalid selection *** Try again");
+                 this.rankStatusView();
                 break;
             case 'A': //Obtain Armor
                  System.out.println("\n***Invalid selection *** Try again");
@@ -55,4 +55,13 @@ public class HelpMenuView extends View{
                
         }
     }
+
+  
+
+    private void rankStatusView() {
+        RankStatusView rankStatusMenu = new RankStatusView();
+     rankStatusMenu.display(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+   
 }
