@@ -12,7 +12,7 @@ import java.io.Serializable;
  */
 public class Location implements Serializable{
  
-    private int row;
+    public int row;
 
     public Location(int row, int column) {
         this.row = row;
@@ -34,7 +34,7 @@ public class Location implements Serializable{
     public void setColumn(int column) {
         this.column = column;
     }
-    private int column;
+    public int column;
     
     private Map map;
 
