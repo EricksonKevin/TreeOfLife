@@ -5,7 +5,13 @@
  */
 package byui.cit260.treeoflife.view;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import kevinjoshtreeoflife.KevinJoshTreeOfLife;
 
 /**
  *
@@ -13,7 +19,13 @@ import java.util.Scanner;
  */
 public abstract class View implements ViewInterface {
     
+    
+    
     public String promptMessage;
+    
+    protected final BufferedReader keyboard = KevinJoshTreeOfLife.getInFile();
+    protected final PrintWriter console = KevinJoshTreeOfLife.getOutFile();
+    
 
     public View(String promptMessage) {
         this.promptMessage = promptMessage;
@@ -48,13 +60,17 @@ public abstract class View implements ViewInterface {
     public String getInput() {
        Boolean valid = false; //indicate if the name has been retrieved
             String choice = null;
-            Scanner keyboard = new Scanner(System.in);//keyboard input stream
+            //keyboard input stream
             
             while(!valid){//while a valid selection has not been retrieved
                 //prompt for the player's selection
                 System.out.println("Select Option");
-                // get the selection from the keyboard and trim off the blanks
-                choice = keyboard.nextLine();
+           try {
+               // get the selection from the keyboard and trim off the blanks
+               choice = this.keyboard.readLine();
+           } catch (IOException ex) {
+               Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
+           }
                 choice = choice.trim();
                 
                 break; // out of the (exit) the repetition
