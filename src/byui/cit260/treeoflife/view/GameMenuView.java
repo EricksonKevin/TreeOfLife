@@ -21,7 +21,7 @@ public class GameMenuView extends View {
             + "\n| Game Menu                            |"
             + "\n---------------------------------------"
             + "\nV - View Map"
-            + "\nC - Character Status" 
+            + "\nC - Choose  Character" 
             + "\nI - View Inventory"     
             + "\nM - Move to new location"
             + "\nH - Help"    
@@ -38,8 +38,8 @@ public class GameMenuView extends View {
             case 'V': // View map
                 this.viewMap();
                 break;
-            case 'C': //Character Status
-                this.characterStatus();
+            case 'C': //Choose Character
+                this.ChooseCharacterView();
                 break;
             case 'I': // View inventory
                 this.viewInventory();
@@ -60,24 +60,10 @@ public class GameMenuView extends View {
         }
     }
 
-    private void startNephiGame() {
-        //display the Nephi menu
-      NephiGameView gameMenu = new NephiGameView();
-      gameMenu.displayMenu();
-    }
-
-    private void startSariahGame() {
-        SariahGameView gameMenu = new SariahGameView();
-      gameMenu.displayMenu();
-    }
-
-    private void startLamanGame() {
-        LamanGameView gameMenu = new LamanGameView();
-      gameMenu.displayMenu();
-    }
+    
 
     private void HelpMenuView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //To change body of generated methods, choose Tools | Templates.
     }
 
     public void viewMap() {
@@ -111,9 +97,6 @@ public class GameMenuView extends View {
             }
     }
 
-    private void characterStatus() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     private void moveLocation() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -123,6 +106,12 @@ public class GameMenuView extends View {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    private void ChooseCharacterView() {
+         ChooseCharacterView chooseCharacterMenu = new ChooseCharacterView();
+     chooseCharacterMenu.display();//To change body of generated methods, choose Tools | Templates.
+    }
+
+   
     private static class MapSymbol {
 
         public MapSymbol() {

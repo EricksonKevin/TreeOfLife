@@ -64,7 +64,7 @@ public class NephiGameView {
         
         switch (choice){
             case 'B': // Continue Game
-        this.startBeginNephiQuestionView();
+        this.BeginNephiQuestionView();
                 break;           
             case 'Q': //Quit help menu
                 return;
@@ -76,9 +76,19 @@ public class NephiGameView {
         }
     }
 
-    private void startBeginNephiQuestionView() {
-       BeginNephiQuestionView BeginQuestion = new BeginNephiQuestionView();
-     BeginQuestion.displayMenu();
+    private void BeginNephiQuestionView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void display() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
+
+    
+
+   
     }
     
-}
+
