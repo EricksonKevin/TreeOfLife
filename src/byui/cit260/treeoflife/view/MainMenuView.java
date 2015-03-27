@@ -41,7 +41,6 @@ public class MainMenuView extends View {
         switch (choice){
             case "N":  
                 this.startNewGame();
-        
                 break;
             case "G": //get and start an existing game
                 this.startExistingGame();
@@ -56,7 +55,7 @@ public class MainMenuView extends View {
                 return ;
                 
             default:
-                System.out.println("\n***Invalid selection *** Try again");
+                this.console.println("\n***Invalid selection *** Try again");
                 break;
                 
                

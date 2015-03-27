@@ -53,7 +53,7 @@ public class GameMenuView extends View {
             case 'Q': //Quit Game
                 return;
             default:
-                System.out.println("\n***Invalid selection *** Try again");
+                this.console.println("\n***Invalid selection *** Try again");
                 break;
                 
                
@@ -72,16 +72,16 @@ public class GameMenuView extends View {
         
         Location [][] locations = map.getLocations();
        
-        System.out.println("Map for The Tree of Life Game");
+        this.console.println("Map for The Tree of Life Game");
         
-        System.out.println("\n | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 |");
+        this.console.println("\n | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 |");
         
         
             for (Location[] row : locations) {
-                System.out.println("---------------------------------------------------------------------------------------------"+"\n 2");
+                this.console.println("---------------------------------------------------------------------------------------------"+"\n 2");
                
                 for (Location[] column: locations) {
-                    System.out.println("|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety");
+                    this.console.println("|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety");
                     Location[][] currentLocation = map.getLocations();
                     
                   Location location = new Location();
@@ -90,7 +90,7 @@ public class GameMenuView extends View {
                       
                               }
                   else {
-                      System.out.println("??");
+                      this.console.println("??");
                       
                   }
                 }

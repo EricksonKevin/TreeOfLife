@@ -31,7 +31,7 @@ public class GameControl {
         /*Character character = new Character();
         game.setCharacter(character);*/
         
-        MapControl.moveActorsToStartingLocation(map);
+        MapControl.moveCharactersToStartingLocation(map);
         
         
       

@@ -35,21 +35,21 @@ public class HelpMenuView extends View{
         char choice = value.charAt(0);       
         switch (choice){
             case 'G': // Goal of the game
-                System.out.println("\nIncrease your rank status in Faith, Righteousness, Spirit, and Salvation to reach the Tree of Life");
+                this.console.println("\nIncrease your rank status in Faith, Righteousness, Spirit, and Salvation to reach the Tree of Life");
                 break;
             case 'M': //How to move
-                System.out.println("\n***Invalid selection *** Try again");
+                this.console.println("\n***Invalid selection *** Try again");
                 break;
             case 'P': //Character Status
                  this.rankStatusView();
                 break;
             case 'A': //Obtain Armor
-                 System.out.println("\n***Invalid selection *** Try again");
+                 this.console.println("\n***Invalid selection *** Try again");
                 break;  
             case 'Q': //Wuit help menu
                 return;
             default:
-                System.out.println("\n***Invalid selection *** Try again");
+                this.console.println("\n***Invalid selection *** Try again");
                 break;
                 
                

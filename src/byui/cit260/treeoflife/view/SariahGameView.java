@@ -11,9 +11,10 @@ import java.util.Scanner;
  *
  * @author Nexeus
  */
-public class SariahGameView {
+public class SariahGameView extends View{
 
-    public final String MENU = "\n"
+    public SariahGameView() {
+        super( "\n"
             + "\n---------------------------------------"
             + "\n Hello Sariah, It is your privilege    "
             + "\n to embark on this journey.  Your      "
@@ -26,40 +27,14 @@ public class SariahGameView {
             + "\n---------------------------------------"
             + "\nB - Begin Game                         "
             + "\nQ - Quit                               "
-            + "\n---------------------------------------";
-    void displayMenu() {
+            + "\n---------------------------------------");
+    }
+@Override
+    public void doAction(Object obj) {
         
-        char selection = ' ';
-        do {
-            System.out.println(MENU);  //display the main menu
-            
-            String input = this.getInput(); // get the users selection
-            selection = input.charAt(0); //get first character of string
-            
-            this.doAction(selection); //do action based on selection
-            
-        } while (selection != 'Q'); // a selection is not "Exit"
-    }
-
-    private String getInput() {
-       Boolean valid = false; //indicate if the name has been retrieved
-            String choice = null;
-            Scanner keyboard = new Scanner(System.in);//keyboard input stream
-            
-            while(!valid){//while a valid selection has not been retrieved
-                //prompt for the player's selection
-                System.out.println("Select Option");
-                // get the selection from the keyboard and trim off the blanks
-                choice = keyboard.nextLine();
-                choice = choice.trim();
-                
-                
-                break; // out of the (exit) the repetition
-            }
-            return choice; // return the selection option
-    }
-
-    private void doAction(char choice) {
+        String value  = (String)obj;
+        
+        char choice = value.charAt(0);
         
         switch (choice){
             case 'B': // Continue Game
@@ -68,7 +43,7 @@ public class SariahGameView {
             case 'Q': //Quit help menu
                 return;
             default:
-                System.out.println("\n***Invalid selection *** Try again");
+                this.console.println("\n***Invalid selection *** Try again");
                 break;
                 
                

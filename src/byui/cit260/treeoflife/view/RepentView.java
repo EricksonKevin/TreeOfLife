@@ -50,22 +50,22 @@ public class RepentView extends View {
         char choice = value.charAt(0);
         switch (choice){
             case 'S': // Repent for Salvation points
-                System.out.println("\n*You earned 1 Salvation point*");
+                this.console.println("\n*You earned 1 Salvation point*");
                 break;
             case 'F': // Repent for Faith points
-                System.out.println("\n*You earned 1 Faith point*");
+                this.console.println("\n*You earned 1 Faith point*");
                 break;
             case 'P': // Repent for Spirit points
-                System.out.println("\n*You earned 1 Spirit point*");
+                this.console.println("\n*You earned 1 Spirit point*");
                 break;
             case 'R': // Repent for Righteousness points
-                System.out.println("\n*You earned 1 Righteousness point*");
+                this.console.println("\n*You earned 1 Righteousness point*");
                 break;  
             case 'E': //exit the program
                 return ;
                 
             default:
-                System.out.println("\n***Invalid selection *** Try again");
+                this.console.println("\n***Invalid selection *** Try again");
                 break;
                 
                

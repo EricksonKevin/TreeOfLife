@@ -35,22 +35,22 @@ public class BeginLamanQuestionView extends View{
         char choice = value.charAt(0);
         switch (choice){
             case 'A': // Repent for Salvation points
-                System.out.println("Congratulations, you earned 2 faith points.");
+                this.console.println("Congratulations, you earned 2 faith points.");
                 break;
             case 'P': // Repent for Faith points
-                System.out.println("Sorry, you received no points.");
+                this.console.println("Sorry, you received no points.");
                 break;
             case 'M': // Repent for Spirit points
-                System.out.println("You received 1 spirit point.");
+                this.console.println("You received 1 spirit point.");
                 break;
             case 'S': // Repent for Righteousness points
-                System.out.println("You received 1 righteousness point.");
+                this.console.println("You received 1 righteousness point.");
                 break;  
             case 'Q': //exit the program
                 return ;
                 
             default:
-                System.out.println("\n***Invalid selection *** Try again");
+                this.console.println("\n***Invalid selection *** Try again");
                 break;
                 
                

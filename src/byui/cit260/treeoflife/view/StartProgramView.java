@@ -7,7 +7,13 @@ package byui.cit260.treeoflife.view;
 
 import byui.cit260.treeoflife.control.ProgramControl;
 import byui.cit260.treeoflife.model.Player;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import kevinjoshtreeoflife.KevinJoshTreeOfLife;
 
 /**
  *
@@ -15,6 +21,8 @@ import java.util.Scanner;
  */
 public class StartProgramView {
     
+    protected final BufferedReader keyboard = KevinJoshTreeOfLife.getInFile();
+    protected final PrintWriter console = KevinJoshTreeOfLife.getOutFile();
 
     public StartProgramView() {
 }
@@ -40,15 +48,15 @@ public class StartProgramView {
 }
 
     private void displayBanner() {
-        System.out.println("\n\n*********************************************");
+        this.console.println("\n\n*********************************************");
         
-        System.out.println("*                                           *"
+        this.console.println("*                                           *"
                 + "\n* This is the game of THE TREE OF LIFE.     *"
                 + "\n* In this game you will need to put on the  *"
                 + "\n* whole armor of God and follow the path to *"
                 + "\n* the Tree of Life.                          ");
         
-         System.out.println("*                                           *"
+         this.console.println("*                                           *"
                 + "\n* You will need to increase your rank in    *"
                 + "\n* four seperate categories.                 *"
                 + "\n* Faith, Righteousness, Salvation and Spirit*" 
@@ -59,41 +67,45 @@ public class StartProgramView {
                 + "\n* increase in these four areas, you will    *"
                 + "\n* find yourself at THE TREE OF LIFE.        *");
          
-          System.out.println("*                                           *"
+          this.console.println("*                                           *"
                 + "\n* Hold fast to the iron rod and you will    *"
                 + "\n* be able to endure all things              *");
-        System.out.println("\n\n*********************************************");
+        this.console.println("\n\n*********************************************");
                  
     }
 
     public String getPlayerName() {
             boolean valid = false; //indicate if the name has been retrieved
             String playerName = null;
-            Scanner keyboard = new Scanner(System.in);//keyboard input stream
+            //keyboard input stream
             
-            while(!valid){//while a valid name has not been retrieved
+            while(!valid){try {
+                //while a valid name has not been retrieved
                 //prompt for the player's name
-                System.out.println("Enter your name below:");
+                this.console.println("Enter your name below:");
                 // get the name from the keyboard and trim off the blanks
-                playerName = keyboard.nextLine();
+                playerName = this.keyboard.readLine();
                 playerName = playerName.trim();
                 
                 
                 // if the name is invalid (less than two characters in length)
                 if (playerName.length()< 2) {
-                    System.out.println("Invalid name - the name must not be blank");
+                    this.console.println("Invalid name - the name must not be blank");
                     continue; // and repeat again
                 }
                 break; // out of the (exit) the repetition
+                } catch (IOException ex) {
+                    Logger.getLogger(StartProgramView.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
             return playerName; // return the name
         }
 
     private void displayWelcomeMessage(Player player) {
-        System.out.println("\n\n=============================================");
-        System.out.println("\tWelcome to the game " + player.getPlayerName());
-        System.out.println("\tWe hope you have a lot of fun");
-        System.out.println("=================================================");
+        this.console.println("\n\n=============================================");
+        this.console.println("\tWelcome to the game " + player.getPlayerName());
+        this.console.println("\tWe hope you have a lot of fun");
+        this.console.println("=================================================");
     }
     }
 

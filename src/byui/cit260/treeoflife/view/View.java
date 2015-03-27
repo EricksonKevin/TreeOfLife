@@ -46,7 +46,7 @@ public abstract class View implements ViewInterface {
        
         String selection = " ";
         do {
-            System.out.println(promptMessage);  //display the main menu
+            this.console.println(promptMessage);  //display the main menu
             
             String input = this.getInput(); // get the users selection
             selection = input; //get first character of string
@@ -64,7 +64,7 @@ public abstract class View implements ViewInterface {
             
             while(!valid){//while a valid selection has not been retrieved
                 //prompt for the player's selection
-                System.out.println("Select Option");
+                this.console.println("Select Option");
            try {
                // get the selection from the keyboard and trim off the blanks
                choice = this.keyboard.readLine();

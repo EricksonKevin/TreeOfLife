@@ -18,7 +18,7 @@ public class MapControl {
        return null;
     }
 
-    public static void moveActorsToStartingLocation(Map map) {
+    public static void moveCharactersToStartingLocation(Map map) {
         System.out.println("*** called moveActorsToStartingLocation() ***");
     }
     

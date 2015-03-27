@@ -42,7 +42,7 @@ public class ChooseCharacterView extends View{
             case 'Q': //Quit help menu
                 return;
             default:
-                System.out.println("\n***Invalid selection *** Try again");
+                this.console.println("\n***Invalid selection *** Try again");
                 break;
                 
                
