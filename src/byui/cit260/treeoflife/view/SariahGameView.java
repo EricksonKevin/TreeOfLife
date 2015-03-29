@@ -25,7 +25,8 @@ public class SariahGameView extends View{
             + "\n of the tree of life, you will gain    "
             + "\n eternal blessings and exaltation.     "
             + "\n---------------------------------------"
-            + "\nB - Begin Game                         "
+            + "\nB - Begin Game  "
+            + "\nP - Print Rank Report                  "
             + "\nQ - Quit                               "
             + "\n---------------------------------------");
     }
@@ -39,7 +40,11 @@ public class SariahGameView extends View{
         switch (choice){
             case 'B': // Continue Game
         this.startBeginQuestionView();
-                break;           
+                break; 
+                
+                case 'P': // print rank report
+        this.startRankReportView();
+                    
             case 'Q': //Quit help menu
                 return;
             default:
@@ -53,6 +58,11 @@ public class SariahGameView extends View{
     private void startBeginQuestionView() {
        BeginQuestionView BeginQuestion = new BeginQuestionView();
      BeginQuestion.displayMenu();
+    }
+
+    private void startRankReportView() {
+        RankReportView RankReport = new RankReportView();
+     RankReport.displayMenu(); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
