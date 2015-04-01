@@ -9,6 +9,15 @@ package byui.cit260.treeoflife.view;
  *
  * @author Erickson
  */
-public class saveGameView {
+public class saveGameView extends View{
+
+    public saveGameView(String promptMessage) {
+        super(promptMessage);
+    }
+
+    @Override
+    public void doAction(Object obj) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

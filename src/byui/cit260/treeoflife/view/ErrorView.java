@@ -28,6 +28,6 @@ public class ErrorView {
         logFile.println(className + " - " + errorMessage);
         
         logFile.flush();
-        
+        //log_file_writer.flush();
     }
 }

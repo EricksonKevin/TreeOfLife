@@ -53,11 +53,16 @@ public class KevinJoshTreeOfLife {
             //open log file
             String filePath = "log.txt";
             KevinJoshTreeOfLife.logFile = new PrintWriter(filePath);
+            
+            StartProgramView startProgramView = new StartProgramView();
+        startProgramView.startProgram(); 
+            
         } catch (Exception e){
                 System.out.println("Exception: " + e.toString() +
                                    "\nCause: " + e.getCause() +
                                    "\nMessage: " + e.getMessage());
-            
+             
+        
         }
         
         finally {
@@ -73,16 +78,20 @@ public class KevinJoshTreeOfLife {
             } catch (IOException ex) {
                 System.out.println("Error closing files");
                 return;
+                
             }
             KevinJoshTreeOfLife.outFile.close();
-            {
-        }
-        {
-        }
-        StartProgramView startProgramView = new StartProgramView();
-        startProgramView.startProgram();  
+            
+          
+            
+        
+            
+        
+        
     }
+        
     }
+    
     public static Game getCurrentGame() {
         return currentGame;
     }
@@ -122,10 +131,12 @@ public class KevinJoshTreeOfLife {
     public static void setLogFile(PrintWriter logFile) {
         KevinJoshTreeOfLife.logFile = logFile;
     }
-
+    
     //public static PrintWriter getOutFile() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+
 
     
     /**
