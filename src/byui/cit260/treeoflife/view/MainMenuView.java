@@ -72,7 +72,20 @@ public class MainMenuView extends View {
     }
 
     private void startExistingGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        System.out.println("\n\nEnter the file path for file where the game "
+                           + "is saved.");
+        
+        String filePath = this.getInput();
+        
+        try {
+            GameControl.getSavedGame(filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
 
     private void displayHelpMenu() {
@@ -83,7 +96,15 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         System.out.println("\n\nEnter the file path for where the game "
+                           + "is to be saved.");
+         String filePath = this.getInput();
+         
+         try{
+             GameControl.saveGame(KevinJoshTreeOfLife.getCurrentGame(),filePath);
+             
+         }catch (Exception ex) {
+             ErrorView.display("MainMenuView", ex.getMessage());
+         }
     }
-    
 }
