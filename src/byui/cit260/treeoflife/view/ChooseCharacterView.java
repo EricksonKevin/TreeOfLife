@@ -51,8 +51,8 @@ public class ChooseCharacterView extends View{
 }
 
     private void NephiGameView() {
-        NephiGameView NephiGameMenu = new NephiGameView();
-     NephiGameMenu.display(); //To change body of generated methods, choose Tools | Templates.
+        NephiGameView nephiGameMenu = new NephiGameView();
+     nephiGameMenu.display(); //To change body of generated methods, choose Tools | Templates.
     }
 
     private void SariahGameView() {

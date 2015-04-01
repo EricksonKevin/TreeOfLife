@@ -53,13 +53,12 @@ public class NephiGameView extends View {
     }
 
     private void BeginNephiQuestionView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        BeginNephiQuestionView beginNephiQuestionMenu = new BeginNephiQuestionView();
+     beginNephiQuestionMenu.display(); //To change body of generated methods, choose Tools | Templates.
     }
 
     
-    public void display() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     
 

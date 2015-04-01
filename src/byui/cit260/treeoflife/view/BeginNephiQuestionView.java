@@ -12,14 +12,9 @@ import java.util.Scanner;
  * @author Nexeus
  */
 public class BeginNephiQuestionView extends View{
-    
-    
-        
-    
-    
             
 
-    public BeginNephiQuestionView(String promptMessage) {
+    public BeginNephiQuestionView() {
         super("\n-----------------------------------------"
             + "\n| Lehi has asked you and your brothers  |"
             + "\n| to go to Jerusalem to obtain the brass|"
@@ -61,8 +56,5 @@ public class BeginNephiQuestionView extends View{
                     System.out.println("Invalid choice");
                 }  //To change body of generated methods, choose Tools | Templates.
     }
-
-    
-    
     
 }
