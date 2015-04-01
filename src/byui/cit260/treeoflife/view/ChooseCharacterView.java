@@ -40,6 +40,7 @@ public class ChooseCharacterView extends View{
                  this.LamenGameView();
                 break;       
             case 'Q': //Quit help menu
+                 this.MainMenuView();
                 return;
             default:
                 this.console.println("\n***Invalid selection *** Try again");
@@ -61,6 +62,11 @@ public class ChooseCharacterView extends View{
 
     private void LamenGameView() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void MainMenuView() {
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
     }
 
   
