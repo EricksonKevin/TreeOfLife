@@ -62,6 +62,7 @@ public class RepentView extends View {
                 this.console.println("\n*You earned 1 Righteousness point*");
                 break;  
             case 'E': //exit the program
+                this.MainMenuView();
                 return ;
                 
             default:
@@ -70,6 +71,11 @@ public class RepentView extends View {
                 
                
         }
+    }
+
+    private void MainMenuView() {
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
     }
 }
 

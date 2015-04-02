@@ -12,23 +12,12 @@ import java.io.PrintWriter;
  *
  * @author Erickson
  */
-public class RankReportView {
+public class RankReportView extends View {
     
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
     
-    
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
+  
     public static PrintWriter getOutFile() {
         return outFile;
     }
@@ -44,11 +33,24 @@ public class RankReportView {
     public static void setInFile(BufferedReader inFile) {
         RankReportView.inFile = inFile;
     }
+
+    public RankReportView(String promptMessage) {
+        super(promptMessage);
+    }
+
+   
+
+   
     
     
     
 
     void displayMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void doAction(Object obj) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

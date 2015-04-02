@@ -42,6 +42,7 @@ public class LamanGameView extends View{
                  this.console.println("\nLets move on with the game");
                 break;  
             case 'Q': //Quit help menu
+                this.MainMenuView();
                 return;
             default:
                 this.console.println("\n***Invalid selection *** Try again");
@@ -49,6 +50,11 @@ public class LamanGameView extends View{
                 
                
         }
+    }
+
+    private void MainMenuView() {
+       MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
     }
     
 }

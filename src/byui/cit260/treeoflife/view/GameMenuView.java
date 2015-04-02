@@ -42,7 +42,7 @@ public class GameMenuView extends View {
                 this.ChooseCharacterView();
                 break;
             case 'I': // View inventory
-                this.viewInventory();
+                //this.InventoryView();
                 break;
             case 'M': //Move to new location
                  this.moveLocation();
@@ -51,6 +51,7 @@ public class GameMenuView extends View {
                  this.HelpMenuView();
                 break;    
             case 'Q': //Quit Game
+                this.MainMenuView();
                 return;
             default:
                 this.console.println("\n***Invalid selection *** Try again");
@@ -102,14 +103,22 @@ public class GameMenuView extends View {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void viewInventory() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     private void ChooseCharacterView() {
          ChooseCharacterView chooseCharacterMenu = new ChooseCharacterView();
      chooseCharacterMenu.display();//To change body of generated methods, choose Tools | Templates.
     }
+
+    private void MainMenuView() {
+       MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
+    }
+
+    //public void InventoryView() {
+        //InventoryView inventoryView = new InventoryView();
+       // inventoryView.display();
+    //}
 
    
     private static class MapSymbol {

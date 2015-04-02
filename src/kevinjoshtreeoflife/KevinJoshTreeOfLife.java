@@ -134,6 +134,10 @@ public class KevinJoshTreeOfLife {
     
     //public static PrintWriter getOutFile() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+    public static Game getRankReport() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     }
 
 

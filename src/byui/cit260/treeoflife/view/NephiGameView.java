@@ -43,6 +43,7 @@ public class NephiGameView extends View {
         this.BeginNephiQuestionView();
                 break;           
             case 'Q': //Quit help menu
+                this.MainMenuView();
                 return;
             default:
                 this.console.println("\n***Invalid selection *** Try again");
@@ -55,6 +56,11 @@ public class NephiGameView extends View {
     private void BeginNephiQuestionView() {
         BeginNephiQuestionView beginNephiQuestionMenu = new BeginNephiQuestionView();
      beginNephiQuestionMenu.display(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void MainMenuView() {
+       MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
     }
 
     

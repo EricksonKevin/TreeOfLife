@@ -38,6 +38,7 @@ public class RankStatusView extends View {
                 break;
               
             case "Q": //Quit help menu
+                this.MainMenuView();
                 return;
             default:
                 this.console.println("\n***Invalid selection *** Try again");
@@ -96,6 +97,11 @@ public class RankStatusView extends View {
                }
     
 }
+
+    private void MainMenuView() {
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
+    }
 
     
 }

@@ -47,6 +47,7 @@ public class HelpMenuView extends View{
                  this.console.println("\n***Invalid selection *** Try again");
                 break;  
             case 'Q': //Wuit help menu
+                this.MainMenuView();
                 return;
             default:
                 this.console.println("\n***Invalid selection *** Try again");
@@ -61,6 +62,11 @@ public class HelpMenuView extends View{
     private void rankStatusView() {
         RankStatusView rankStatusMenu = new RankStatusView();
      rankStatusMenu.display(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void MainMenuView() {
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
     }
 
    

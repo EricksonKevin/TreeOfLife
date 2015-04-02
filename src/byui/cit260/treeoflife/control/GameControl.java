@@ -90,6 +90,10 @@ public class GameControl {
         }
         KevinJoshTreeOfLife.setCurrentGame(game);
     }
+
+    public static void RankReport(Game currentGame, String filePath) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }

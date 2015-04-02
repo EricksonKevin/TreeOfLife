@@ -5,7 +5,9 @@
  */
 package byui.cit260.treeoflife.view;
 
+import byui.cit260.treeoflife.control.GameControl;
 import java.util.Scanner;
+import kevinjoshtreeoflife.KevinJoshTreeOfLife;
 
 /**
  *
@@ -60,9 +62,21 @@ public class SariahGameView extends View{
      BeginQuestion.displayMenu();
     }
 
+     private void RankReport() {
+         this.console.println("\n\nSariah Rank Report ");
+                           
+         String filePath = this.getInput();
+         
+         try{
+             GameControl.RankReport(KevinJoshTreeOfLife.getRankReport(),filePath);
+             
+         }catch (Exception ex) {
+             ErrorView.display("MainMenuView", ex.getMessage());
+         }
+    }
+
     private void startRankReportView() {
-        RankReportView RankReport = new RankReportView();
-     RankReport.displayMenu(); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
