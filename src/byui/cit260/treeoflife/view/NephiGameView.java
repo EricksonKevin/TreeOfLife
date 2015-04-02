@@ -5,7 +5,9 @@
  */
 package byui.cit260.treeoflife.view;
 
+import byui.cit260.treeoflife.control.GameControl;
 import java.util.Scanner;
+import kevinjoshtreeoflife.KevinJoshTreeOfLife;
 
 /**
  *
@@ -27,6 +29,7 @@ public class NephiGameView extends View {
             + "\n eternal blessings and exaltation.     "
             + "\n---------------------------------------"
             + "\nB - Begin Game                         "
+            + "\nP - Print Rank Report                  "    
             + "\nQ - Quit                               "
             + "\n---------------------------------------");
     }
@@ -41,7 +44,10 @@ public class NephiGameView extends View {
         switch (choice){
             case 'B': // Continue Game
         this.BeginNephiQuestionView();
-                break;           
+                break;   
+                case 'P': // print rank report
+        this.startRankReportView();
+                
             case 'Q': //Quit help menu
                 this.MainMenuView();
                 return;
@@ -61,6 +67,19 @@ public class NephiGameView extends View {
     private void MainMenuView() {
        MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.display();
+    }
+
+    private void startRankReportView() {
+        this.console.println("\n\nEnter the file path for where the rank "
+                           + "report is to be saved.");
+         String filePath = this.getInput();
+         
+         try{
+             GameControl.RankReport(KevinJoshTreeOfLife.getRankReport(),filePath);
+             
+         }catch (Exception ex) {
+             ErrorView.display("MainMenuView", ex.getMessage());
+         }
     }
 
     

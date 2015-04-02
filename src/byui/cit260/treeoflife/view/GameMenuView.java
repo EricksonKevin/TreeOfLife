@@ -79,10 +79,10 @@ public class GameMenuView extends View {
         
         
             for (Location[] row : locations) {
-                this.console.println("---------------------------------------------------------------------------------------------"+"\n 2");
+                this.console.println("\n---------------------------------------------------------------------------------------------"+"\n 2");
                
                 for (Location[] column: locations) {
-                    this.console.println("|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety");
+                    this.console.println("\n|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety|ety");
                     Location[][] currentLocation = map.getLocations();
                     
                   Location location = new Location();

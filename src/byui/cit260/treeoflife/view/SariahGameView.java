@@ -63,8 +63,8 @@ public class SariahGameView extends View{
     }
 
      private void RankReport() {
-         this.console.println("\n\nSariah Rank Report ");
-                           
+         this.console.println("\n\nEnter the file path for where the rank "
+                           + "report is to be saved.");
          String filePath = this.getInput();
          
          try{
