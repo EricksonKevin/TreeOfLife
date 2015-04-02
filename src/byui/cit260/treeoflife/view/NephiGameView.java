@@ -29,6 +29,7 @@ public class NephiGameView extends View {
             + "\n eternal blessings and exaltation.     "
             + "\n---------------------------------------"
             + "\nB - Begin Game                         "
+            + "\nR - Repent                             "    
             + "\nP - Print Rank Report                  "    
             + "\nQ - Quit                               "
             + "\n---------------------------------------");
@@ -44,10 +45,13 @@ public class NephiGameView extends View {
         switch (choice){
             case 'B': // Continue Game
         this.BeginNephiQuestionView();
-                break;   
+                break;  
+                case 'R': // Continue Game
+        this.RepentView();
+                break;
                 case 'P': // print rank report
         this.startRankReportView();
-                
+                break;
             case 'Q': //Quit help menu
                 this.MainMenuView();
                 return;
@@ -80,6 +84,11 @@ public class NephiGameView extends View {
          }catch (Exception ex) {
              ErrorView.display("MainMenuView", ex.getMessage());
          }
+    }
+
+    private void RepentView() {
+        RepentView repentView = new RepentView();
+        repentView.display();
     }
 
     
