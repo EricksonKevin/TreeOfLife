@@ -61,8 +61,8 @@ public class RankStatusView extends View {
            }
                   
                    public int getMax(int[] inputArray){
-                       int maxValue = inputArray[0];
-                       for (int i=1; i < inputArray.length;i++){
+                       int maxValue = inputArray[3];
+                       for (int i=0; i < inputArray.length;i++){
                            if(inputArray[i] > maxValue){
                                maxValue = inputArray[i];
                                
@@ -81,12 +81,12 @@ public class RankStatusView extends View {
            int array[] = new int[]{5, 3, 2, 9};
                    
                    int min = getMin(array);
-                   System.out.println("Maximum Value is: "+min);
+                   System.out.println("Minimum Value is: "+min);
            }
                   
                    public int getMin(int[] inputArray){
                        int minValue = inputArray[0];
-                       for (int i=1; i < inputArray.length;i++){
+                       for (int i=0; i < inputArray.length;i++){
                            if(inputArray[i] < minValue){
                                minValue = inputArray[i];
                                
