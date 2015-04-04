@@ -57,11 +57,13 @@ public class ChooseCharacterView extends View{
     }
 
     private void SariahGameView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        SariahGameView sariahGameMenu = new SariahGameView();
+     sariahGameMenu.display();
     }
 
     private void LamenGameView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        LamanGameView lamanGameMenu = new LamanGameView();
+     lamanGameMenu.display();
     }
 
     private void MainMenuView() {
