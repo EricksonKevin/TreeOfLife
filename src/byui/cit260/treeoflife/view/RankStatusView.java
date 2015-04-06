@@ -81,11 +81,11 @@ public class RankStatusView extends View {
            int array[] = new int[]{5, 3, 2, 9};
                    
                    int min = getMin(array);
-                   System.out.println("Minimum Value is: "+min);
+                   System.out.println("Maximum Value is: "+min);
            }
                   
                    public int getMin(int[] inputArray){
-                       int minValue = inputArray[0];
+                       int minValue = inputArray[3];
                        for (int i=0; i < inputArray.length;i++){
                            if(inputArray[i] < minValue){
                                minValue = inputArray[i];
