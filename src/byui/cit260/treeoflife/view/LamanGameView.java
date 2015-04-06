@@ -56,5 +56,8 @@ public class LamanGameView extends View{
        MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.display();
     }
-    
+    private void BeginLamanQuestionView() {
+        BeginLamanQuestionView beginLamanQuestionMenu = new BeginLamanQuestionView();
+     beginLamanQuestionMenu.display(); //To change body of generated methods, choose Tools | Templates.
+    }
 }

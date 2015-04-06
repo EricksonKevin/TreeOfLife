@@ -59,7 +59,7 @@ public class SariahGameView extends View{
 
     private void startBeginQuestionView() {
        BeginQuestionView BeginQuestion = new BeginQuestionView();
-     BeginQuestion.displayMenu();
+     BeginQuestion.display();
     }
 
      private void RankReport() {
